@@ -21,10 +21,10 @@ public class StudentGradeCalculator {
 
         //conditinoal to decide if student passed
         if(average >= 70){
-            System.out.println("Passed");
+            System.out.println("Passed " + course);
         }
         else{
-            System.out.println("Failed");
+            System.out.println("Failed " + course);
         }
     }
 
