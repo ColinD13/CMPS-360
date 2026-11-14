@@ -24,7 +24,7 @@ app.MapGet("/courses/{id:int}", (int id) =>
 });
 
 //post a course
-app.MapPost("/api/courses", (Course course) =>
+app.MapPost("/courses", (Course course) =>
 {
     if (string.IsNullOrWhiteSpace(course.Code) ||
         string.IsNullOrWhiteSpace(course.Title) ||
@@ -39,7 +39,7 @@ app.MapPost("/api/courses", (Course course) =>
 });
 
 //edit a course
-app.MapPut("/api/courses/{id}", (int id, Course updatedCourse) =>
+app.MapPut("/courses/{id}", (int id, Course updatedCourse) =>
 {
     var course = courses.FirstOrDefault(c => c.Id == id);
 
